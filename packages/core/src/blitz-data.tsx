@@ -18,6 +18,10 @@ export function getBlitzRuntimeData() {
   }
 }
 
+export function setBlitzRuntimeDataForTests() {
+  window.__BLITZ_DATA__ = _getBlitzRuntimeData()
+}
+
 // Automatically deserialize __BLITZ_DATA__ in a browser environment
 if (isClient) {
   if (document.getElementById("__BLITZ_DATA__")) {
